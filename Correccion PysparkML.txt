@@ -1,0 +1,39 @@
+Feedback:
+1-Instalación y Configuración:
+
+Has comenzado correctamente instalando PySpark y configurando el entorno de Spark. La configuración del entorno en Google Colab con Google Drive también está bien hecha y es una buena práctica para cargar datasets.
+
+2-Exploración de Datos (EDA):
+
+Cargar el dataset utilizando spark.read.csv y mostrar las primeras filas y el esquema con printSchema() está bien implementado. El análisis de las distribuciones de las variables numéricas y el resumen estadístico ayudan a comprender bien los datos.
+
+Al convertir el DataFrame de PySpark a un DataFrame de Pandas con toPandas() para las visualizaciones, es importante recordar que esto puede ser ineficiente si el dataset fuera mucho más grande. Dado que el dataset de este ejercicio es pequeño, está bien, pero es un buen hábito considerar trabajar directamente con las capacidades distribuidas de PySpark si estás tratando con grandes volúmenes de datos.
+
+3-Visualización de Variables:
+
+Los gráficos de histogramas para las variables numéricas están bien presentados. Sin embargo, podrías haber añadido un poco más de interpretación o análisis de lo que estos gráficos revelan, como las tendencias en la distribución de charges o cómo se distribuyen las edades o el BMI en la población.
+
+Los gráficos de barras para las variables categóricas también están bien ejecutados, y dan una idea clara de la distribución por género, fumadores y regiones. Sin embargo, en este punto podrías haber explorado más sobre la relación entre las variables categóricas y el objetivo (charges), por ejemplo, usando gráficos de caja o gráficos de dispersión segmentados por fumadores/no fumadores o por región.
+
+4-Machine Learning con PySpark:
+
+Has manejado bien la conversión de variables categóricas a numéricas utilizando StringIndexer y la creación del vector de características con VectorAssembler. La estructura del preprocesamiento es sólida.
+
+El uso de regresión lineal es adecuado para este tipo de problema, ya que la variable objetivo (charges) es continua. El ajuste del modelo y la evaluación con métricas como R² y RMSE están correctamente implementados. Un R² de 0.736 y un RMSE de 6180 son resultados razonables, pero puedes buscar mejorar el modelo añadiendo más características o explorando otros algoritmos más complejos si es necesario.
+
+5-Evaluación del Modelo:
+
+Has utilizado correctamente el R² y el RMSE para evaluar el modelo. Un análisis adicional sobre el rendimiento del modelo y qué podrías hacer para mejorarlo, como ajustar hiperparámetros o añadir interacciones entre variables, sería una adición útil.
+
+Podrías haber añadido una visualización de los residuos o un análisis más profundo de cómo las predicciones del modelo se comparan con los valores reales para una mejor comprensión de dónde el modelo podría mejorar.
+
+6-Documentación:
+
+La estructura del código es clara y fácil de seguir. Sin embargo, podrías agregar un poco más de explicación en algunas partes, como el por qué usas ciertas técnicas (por ejemplo, la elección de la regresión lineal) o por qué transformas las variables de esa manera. Esto ayudaría a otros que lean tu código a entender mejor tus decisiones.
+
+Recomendación Final:
+El trabajo está bien estructurado, y has cubierto los pasos clave tanto en la exploración de datos como en el modelado. Sería interesante ver más análisis interpretativo de los resultados, tanto en las visualizaciones como en la evaluación del modelo. Además, intenta explorar cómo puedes mejorar el modelo o interpretar los resultados más a fondo.
+
+Puntos Fuertes y áreas de mejora:
+Puntos fuertes: Buena estructura de preprocesamiento, implementación clara del modelo de regresión lineal, y visualización efectiva de variables categóricas.
+Áreas de mejora: Más análisis interpretativo de los gráficos y los resultados del modelo, y explicación más detallada de las decisiones de modelado.

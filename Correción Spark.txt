@@ -1,0 +1,3 @@
+En el apartado "Hay demasiados decimales para la media y el stddev en describe(). Formatea los números para que sólo se muestren hasta dos decimales. Presta atención a los tipos de datos que devuelve .describe()" no haces lo que se pide.
+Ten cuidado con las tabulaciones, deberían ser 4 espacios.
+En los últimos dos apartados la salida debería de estar ordenada por año tal y como indican los outputs de ejemplo.
